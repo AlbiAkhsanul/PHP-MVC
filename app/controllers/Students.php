@@ -56,10 +56,10 @@ class Students extends Controller {
         }
     }
 
-    public function search($keyword){
+    public function search(){
         $data['activePage'] = $this->activePage;
         $data['title'] = 'Students-list-';
-        $data['students'] = $this->model('Students_model')->getAllStudents();
+        $data['students'] = $this->model('Students_model')->getStudentsByKeyword();
         $this->view('templates/header',$data);
         $this->view('students/index',$data);
         $this->view('templates/footer');

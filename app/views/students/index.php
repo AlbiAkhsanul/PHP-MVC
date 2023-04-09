@@ -14,7 +14,7 @@
     <h2 class="mt-3">Students List</h2>
 
     <form class="d-flex mt-2 mb-2 col-lg-3" role="search" action="<?=BASEURL;?>/students/search" method="post">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" name="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="keyword" name="keyword" autocomplete="off">
         <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
 

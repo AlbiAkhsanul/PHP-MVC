@@ -1,3 +1,3 @@
 <div class="container">
-    <h1>Selamat Datang Di About/Page</h1>
+    <h1>Welcome To About/Page</h1>
 </div>

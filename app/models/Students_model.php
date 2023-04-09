@@ -62,4 +62,19 @@ class Students_model {
 
         return $this->db->affectedRowCount();
     }
+
+    public function getStudentsByKeyword(){
+        $keyword = $_POST['keyword'];
+
+        $query = "SELECT * FROM students WHERE
+            name LIKE :keyword OR
+            npm LIKE :keyword OR
+            email LIKE :keyword OR
+            major LIKE :keyword
+        ";
+
+        $this->db->query($query);
+        $this->db->bind('keyword',"%$keyword%");
+        return $this->db->resultSet();
+    }
 }
